@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.jdy.freeboard.dao.BoardDao">
+
+	<insert id="writeDao">
+		insert into freeboard(bnum, bname, btitle, bcontent) values(freeboard_seq.nextval, #{param1}, #{param2}, #{param3})
+	</insert>
+	
+	<select id="listDao" resultType="com.jdy.freeboard.dto.BoardDto">
+		select * from freeboard order by bnum desc
+	</select>
+
+	
+
+</mapper>   
